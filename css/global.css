@@ -1,0 +1,91 @@
+@import url(reset.css) layer(reset);
+@import url(variables.css) layer(theme);
+@import url(layout.css) layer(layout);
+
+@layer reset, theme, layout;
+
+body {
+  color: var(--clr-txt-main);
+  background: var(--clr-bg-main);
+  font-family: var(--txt-font-copy);
+
+  > * {
+    padding: 0.5rem 0;
+  }
+
+  > header {
+    font-weight: 800;
+  }
+
+  main {
+    padding: 1rem 0;
+  }
+
+  > footer {
+    text-align: center;
+  }
+}
+
+#tabs li {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-accent);
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
+#movieList {
+  display: grid;
+  gap: 1rem;
+
+  li {
+    container-type: inline-size;
+
+    article {
+      display: grid;
+      border-radius: 1rem;
+      border: 1px solid var(--clr-secondary);
+      overflow: clip;
+
+      > * {
+        padding: 0.5rem 1rem;
+      }
+
+      div > *:not(:last-child) {
+        margin-bottom: 1em;
+      }
+
+      img {
+        max-width: 280px;
+        justify-self: center;
+      }
+
+      strong {
+        font-weight: 800;
+      }
+
+      @container (400px < width) {
+        grid-template-columns: auto 1fr;
+        gap-x: 1rem;
+
+        > header {
+          grid-column: span 2;
+        }
+
+        img {
+          grid-row: span 2;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (640px < width) {
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+}

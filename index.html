@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Movie Database</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <script type="module" src="js/api.js"></script>
+  </head>
+  <body>
+    <header data-theme="main">
+      <h1>The Movie Database</h1>
+    </header>
+    <nav data-theme="tabs">
+      <ul id="tabs" role="list">
+        <li data-endpoint="now_playing" class="active">Now Playing</li>
+        <li data-endpoint="popular">Popular</li>
+        <li data-endpoint="top_rated">Top Rated</li>
+        <li data-endpoint="upcoming">Upcoming</li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <ul id="movieList" role="list"></ul>
+      </section>
+    </main>
+    <footer data-theme="main">
+      <p>Copyright 2025 &copy; S. S. Soto</p>
+    </footer>
+    <template>
+      <li>
+        <article>
+          <header data-theme="heading">
+            <h2>Movie title</h2>
+          </header>
+          <img src="" alt="" />
+          <div>
+            <p>Movie description</p>
+            <ul role="list">
+              <li>
+                <strong>Original title:</strong> <span class="ogTitle"></span>
+              </li>
+              <li>
+                <strong>Release date:</strong> <span class="releaseDate"></span>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </li>
+    </template>
+  </body>
+</html>

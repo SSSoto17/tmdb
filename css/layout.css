@@ -1,0 +1,18 @@
+body {
+  display: grid;
+
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100svh;
+
+  > header,
+  > nav,
+  > main,
+  > footer {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 1200px) minmax(1rem, 1fr);
+
+    > * {
+      grid-column: 2;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+:root {
+  /* COLOR */
+  --clr-primary: #321224;
+  --clr-secondary: #5f0b3f;
+  --clr-tertiary: #9a001d;
+  --clr-accent: #fafad3;
+  --clr-neutral-light-1: #fff;
+  --clr-neutral-light-2: #fffaf0;
+  --clr-neutral-dark: #1b1b1b;
+
+  --clr-bg-main: var(--clr-neutral-light-1);
+  --clr-txt-main: var(--clr-neutral-dark);
+
+  /* TEXT */
+  --txt-font-copy: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --txt-font-display: ;
+}
+
+[data-theme="main"] {
+  color: var(--clr-neutral-light-2);
+  background: var(--clr-primary);
+}
+
+[data-theme="heading"] {
+  color: var(--clr-neutral-light-1);
+  background: var(--clr-secondary);
+}
+
+[data-theme="tabs"] {
+  color: var(--clr-neutral-light-1);
+  background: var(--clr-tertiary);
+
+  li.active {
+    color: var(--clr-accent);
+    text-decoration: underline;
+  }
+}
